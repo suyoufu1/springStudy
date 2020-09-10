@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--使用spring来创建对象,在spring中这些都成为bean
+        这里的bean就是一个对象，只不过这个user对象让bean去管理，然后自动生成对象，只需要
+        初始化实例容器spring。
+        before:
+         类型 变量名 = new 类型()
+         User user = new User()
+        after:
+         bean中的 id = 变量名
+         class = new 对象 路径
+         property相当于给对象中的属性赋值
+        bean = 对象 -> new user()
+
+        注意：setter注入对象的
+        变成被动的接收
+    -->
+
+    <bean id="student" class="com.syf.spring_study.pojo.Student" name="st">
+        <!--第一种普通值的注入-->
+        <property name="name" value="syf"/>
+    </bean>
+
+</beans>
